@@ -1,9 +1,9 @@
-package com.patika.akbankservice.controller;
+package org.patika.garantiservice.controller;
 
-import com.patika.akbankservice.dto.request.ApplicationRequest;
-import com.patika.akbankservice.dto.response.ApplicationResponse;
-import com.patika.akbankservice.service.ApplicationService;
 import lombok.RequiredArgsConstructor;
+import org.patika.garantiservice.dto.request.ApplicationRequest;
+import org.patika.garantiservice.dto.response.ApplicationResponse;
+import org.patika.garantiservice.service.ApplicationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class ApplicationController {
 
     private final ApplicationService applicationService;
-    
+
     @PostMapping
     public ApplicationResponse createApplication(@RequestBody ApplicationRequest request) {
         return applicationService.createApplication(request);
